@@ -27,14 +27,31 @@ public class TestCafe {
         menu.add("cappuccino");
         menu.add("latte");
         menu.add("mocha");
+        ArrayList<Double> menuPrice = new ArrayList<Double>();
+        menuPrice.add(1.5);
+        menuPrice.add(3.5);
+        menuPrice.add(4.5);
+        menuPrice.add(3.5);
         appTest.displayMenu(menu);
+        System.out.println("----- Display Menu Test (Overloaded) -----");
+        appTest.displayMenu(menu, menuPrice);
 
-        System.out.println("\n----- Add Customer Test-----");
-        ArrayList<String> customers = new ArrayList<String>();
-        // --- Test 4 times ---
-        for (int i = 0; i < 4; i++) {
-        appTest.addCustomer(customers);
-        System.out.println("\n");
-        }
+        // System.out.println("\n----- Add Customer Test-----");
+        // ArrayList<String> customers = new ArrayList<String>();
+        // // --- Test 4 times ---
+        // for (int i = 0; i < 4; i++) {
+        // appTest.addCustomer(customers);
+        // System.out.println("\n");
+        // }
+
+        // ninja bonus 1 test
+        System.out.println("\n----- Print Price Chart Test -----");
+        String columbian = new String("Columbian Coffee Grounds");
+        double columbianPrice = 15.0;
+        int columbianQuantity = 3;
+        appTest.printPriceChart(columbian, columbianPrice, columbianQuantity);
+
+        // ninja bonus 2 test
+
     }
 }

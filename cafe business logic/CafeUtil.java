@@ -28,6 +28,13 @@ public class CafeUtil {
         }
     }
 
+    // ninja bonus 2, overload displaymenu with prices
+    public void displayMenu(ArrayList<String> menuItems, ArrayList<Double> prices){
+        for(int i = 0; i < menuItems.size(); i++){
+            System.out.printf("%d\t%s\t--\t$%.02f\n", i, menuItems.get(i), prices.get(i));
+        }
+    }
+
     // exercsie 4: take customer name input and print customized greeting
     public void addCustomer(ArrayList<String> customers){
         System.out.println("Please enter your name: ");
@@ -36,6 +43,14 @@ public class CafeUtil {
         System.out.printf("There are %d people in front of you.\n", customers.size());
         customers.add(userName);
         System.out.println(customers);
+    }
+
+    // ninja bonus 1
+    public void printPriceChart(String product, double price, int maxQuantity){
+        System.out.println(product);
+        for(int i = 1; i <= maxQuantity; i++) {
+            System.out.printf("\n%d\t-\t$%.02f",i, price*i-(.5*(i-1)));
+        }
     }
 
 }
