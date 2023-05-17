@@ -29,10 +29,15 @@ public class CafeUtil {
     }
 
     // ninja bonus 2, overload displaymenu with prices
-    public void displayMenu(ArrayList<String> menuItems, ArrayList<Double> prices){
+    public boolean displayMenu(ArrayList<String> menuItems, ArrayList<Double> prices){
+        // return false if array sizes are different
+        if(menuItems.size() != prices.size()){
+            return false;
+        }
         for(int i = 0; i < menuItems.size(); i++){
             System.out.printf("%d\t%s\t--\t$%.02f\n", i, menuItems.get(i), prices.get(i));
         }
+        return true;
     }
 
     // exercsie 4: take customer name input and print customized greeting
